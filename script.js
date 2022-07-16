@@ -1,4 +1,5 @@
 const container = document.getElementById("container");
+let rows = document.getElementsByClassName("gridRow");
 
 function makeRows(rowNum) {
 
