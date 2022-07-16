@@ -2,6 +2,11 @@ const container = document.getElementById("container");
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
 
+function createGrid() {
+    makeRows(16);
+    makeColumns(16);
+}
+
 function makeRows(rowNum) {
 
     for (r = 0; r < rowNum; r++) {
