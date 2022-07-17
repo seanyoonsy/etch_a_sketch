@@ -74,3 +74,17 @@ function reloadGrid() {
 function clearGrid() {
     grid.innerHTML = '';
 }
+
+function activateButton(newMode) {
+    if (currentMode === 'draw') {
+        drawBtn.classList.remove('active');
+    } else if (currentMode === 'eraser') {
+        eraserBtn.classList.remove('active');
+    }
+  
+    if (newMode === 'draw') {
+        drawBtn.classList.add('active');
+    } else if (newMode === 'eraser') {
+        eraserBtn.classList.add('active');
+    }
+}
