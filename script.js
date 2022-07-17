@@ -7,7 +7,7 @@ let currentMode = default_mode;
 let currentSize = default_size;
 
 const colorPicker = document.getElementById('colorPicker');
-const drawBtn = document.getElementById('drawBtn')
+const drawBtn = document.getElementById('drawBtn');
 const eraserBtn = document.getElementById('eraserBtn');
 const clearBtn = document.getElementById('clearBtn');
 const sizeValue = document.getElementById('sizeValue');
@@ -47,6 +47,15 @@ function setupGrid(size) {
     }
 }
 
+function changeColor(e) {
+    if (e.type === 'mouseover' && !mouseDown) return;
+    if (currentMode === 'draw') {
+        e.target.style.backgroundColor = currentColor;
+    } else if (currentMode === 'eraser') {
+        e.target.style.backgroundColor = '#fefefe';
+    }
+}
+
 function changeSize(value) {
     setCurrentSize(value);
     updateSizeValue(value);
@@ -65,4 +74,3 @@ function reloadGrid() {
 function clearGrid() {
     grid.innerHTML = '';
 }
-
