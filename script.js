@@ -7,6 +7,7 @@ let currentMode = default_mode;
 let currentSize = default_size;
 
 const colorPicker = document.getElementById('colorPicker');
+const drawBtn = document.getElementById('drawBtn')
 const eraserBtn = document.getElementById('eraserBtn');
 const clearBtn = document.getElementById('clearBtn');
 const sizeValue = document.getElementById('sizeValue');
@@ -14,6 +15,7 @@ const sizeSlider = document.getElementById('sizeSlider');
 const grid = document.getElementById('grid');
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value);
+drawBtn.onclick = () => setCurrentMode('draw')
 eraserBtn.onclick = () => setCurrentMode('eraser');
 clearBtn.onclick = () => reloadGrid();
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
