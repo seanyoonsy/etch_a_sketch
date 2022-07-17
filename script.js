@@ -21,6 +21,10 @@ clearBtn.onclick = () => reloadGrid();
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
 sizeSlider.onchange = (e) => changeSize(e.target.value);
 
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
+
 function setCurrentColor(newColor) {
     currentColor = newColor;
 }
