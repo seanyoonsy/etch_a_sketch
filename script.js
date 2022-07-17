@@ -1,3 +1,6 @@
+const default_color = '#333333';
+const default_size = 16;
+
 const colorPicker = document.getElementById('colorPicker');
 const eraserBtn = document.getElementById('eraserBtn');
 const clearBtn = document.getElementById('clearBtn');
