@@ -1,6 +1,9 @@
-const container = document.getElementById("container");
-let rows = document.getElementsByClassName("gridRow");
-let cells = document.getElementsByClassName("cell");
+const colorPicker = document.getElementById('colorPicker')
+const eraserBtn = document.getElementById('eraserBtn')
+const clearBtn = document.getElementById('clearBtn')
+const sizeValue = document.getElementById('sizeValue')
+const sizeSlider = document.getElementById('sizeSlider')
+const grid = document.getElementById('grid')
 
 createGrid();
 
