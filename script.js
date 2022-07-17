@@ -12,6 +12,8 @@ const sizeSlider = document.getElementById('sizeSlider');
 const grid = document.getElementById('grid');
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value);
+eraserBtn.onclick = () => setCurrentMode('eraser');
+clearBtn.onclick = () => reloadGrid();
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
 sizeSlider.onchange = (e) => changeSize(e.target.value);
 
