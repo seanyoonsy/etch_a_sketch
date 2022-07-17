@@ -25,6 +25,10 @@ function setupGrid(size) {
     }
 }
 
+function updateSizeValue(value) {
+    sizeValue.innerHTML = `${value} x ${value}`;
+}
+
 function reloadGrid() {
     clearGrid();
     setupGrid(currentSize);
