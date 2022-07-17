@@ -6,6 +6,8 @@ const sizeSlider = document.getElementById('sizeSlider');
 const grid = document.getElementById('grid');
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value);
+sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
+sizeSlider.onchange = (e) => changeSize(e.target.value);
 
 function setCurrentMode(newMode) {
     activateButton(newMode);
@@ -23,6 +25,12 @@ function setupGrid(size) {
         gridElement.addEventListener('mousedown', changeColor);
         grid.appendChild(gridElement);
     }
+}
+
+function changeSize(value) {
+    setCurrentSize(value);
+    updateSizeValue(value);
+    reloadGrid();
 }
 
 function updateSizeValue(value) {
