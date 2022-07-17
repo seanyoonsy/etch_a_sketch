@@ -24,3 +24,13 @@ function setupGrid(size) {
         grid.appendChild(gridElement);
     }
 }
+
+function reloadGrid() {
+    clearGrid();
+    setupGrid(currentSize);
+}
+  
+function clearGrid() {
+    grid.innerHTML = '';
+}
+
