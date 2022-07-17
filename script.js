@@ -9,9 +9,17 @@ colorPicker.oninput = (e) => setCurrentColor(e.target.value);
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
 sizeSlider.onchange = (e) => changeSize(e.target.value);
 
+function setCurrentColor(newColor) {
+    currentColor = newColor;
+}
+
 function setCurrentMode(newMode) {
     activateButton(newMode);
     currentMode = newMode;
+}
+
+function setCurrentSize(newSize) {
+    currentSize = newSize;
 }
 
 function setupGrid(size) {
