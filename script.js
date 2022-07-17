@@ -1,7 +1,9 @@
 const default_color = '#333333';
+const default_mode = 'draw';
 const default_size = 16;
 
 let currentColor = default_color;
+let currentMode = default_mode;
 let currentSize = default_size;
 
 const colorPicker = document.getElementById('colorPicker');
