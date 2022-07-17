@@ -88,3 +88,8 @@ function activateButton(newMode) {
         eraserBtn.classList.add('active');
     }
 }
+
+window.onload = () => {
+    setupGrid(default_size);
+    activateButton(default_mode);
+}
